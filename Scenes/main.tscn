@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ft3rvbv3g3gt"]
+
+[ext_resource type="PackedScene" uid="uid://b8svs6ahonsmq" path="res://Scenes/player.tscn" id="1_g0may"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t56jj"]
+
+[node name="Main" type="Node"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.864108, -0.260012, 0.430942, 0, 0.856222, 0.516608, -0.503307, -0.446405, 0.739868, 3, 3, 4.57086)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.79412, 0, 0, 0, 1, 0, 0, 0, 2.31958, 0, -0.838533, 0)
+mesh = SubResource("PlaneMesh_t56jj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.368482, 0.929635, 0, -0.929635, 0.368482, 0, 5.68817, 3.78759)
+
+[node name="Player" parent="." instance=ExtResource("1_g0may")]
